@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Пропорции, температурный режим и пошаговый рецепт нежного омлета.">
+  <title>Механика идеального омлета</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="#top"><span aria-hidden="true">⚙</span> Омлетная мастерская</a>
+      <nav aria-label="Разделы рецепта">
+        <a href="#ingredients">Ингредиенты</a>
+        <a href="#recipe">Рецепт</a>
+        <a href="#temperature">Нагрев</a>
+        <a href="#tips">Секреты</a>
+        <a href="#mistakes">Ошибки</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">✦ &nbsp; Кухонное руководство</p>
+        <h1>Механика<br>идеального<br><em>омлета</em></h1>
+        <p class="intro">Три яйца, сливочное масло и тихий огонь. Готовим нежный омлет со светлой поверхностью и мягкими складками.</p>
+        <a class="button" href="#recipe">К рецепту</a>
+      </div>
+      <figure class="instrument" aria-hidden="true">
+        <svg viewBox="0 0 500 500">
+          <defs>
+            <linearGradient id="metal" x2="1" y2="1" gradientUnits="objectBoundingBox">
+              <stop stop-color="#f2cb81"/><stop offset=".28" stop-color="#9a5a30"/><stop offset=".49" stop-color="#663920"/><stop offset=".75" stop-color="#d69a51"/><stop offset="1" stop-color="#53301c"/>
+            </linearGradient>
+            <radialGradient id="face" cx=".42" cy=".34" r=".7">
+              <stop stop-color="#f6dfad"/><stop offset=".83" stop-color="#d9b27a"/><stop offset="1" stop-color="#a56b3d"/>
+            </radialGradient>
+            <g id="gear">
+              <circle r="45" fill="none" stroke="#8a5b36" stroke-width="14" stroke-dasharray="12 8"/>
+              <circle r="41" fill="#271a14" stroke="#9f6a3f" stroke-width="4"/>
+              <circle r="29" fill="none" stroke="#79502f" stroke-width="2"/>
+              <path d="M-30 0h60M0-30v60M-21-21l42 42m0-42l-42 42" stroke="#79502f" stroke-width="5"/>
+              <circle r="10" fill="#3a251a" stroke="#aa7545" stroke-width="3"/>
+            </g>
+            <g id="screw"><circle r="7" fill="#48301e" stroke="#e0a463"/><path d="M-3 3l6-6" stroke="#c98f55" stroke-width="1.5"/></g>
+          </defs>
+          <path d="M80 324H55a18 18 0 0 0-18 18v49m391-185h24a18 18 0 0 0 18-18v-49" fill="none" stroke="#633d26" stroke-width="15"/>
+          <path d="M80 321H55a18 18 0 0 0-18 18v52m391-188h24a18 18 0 0 0 18-18v-46" fill="none" stroke="#b47747" stroke-width="4"/>
+          <use href="#gear" transform="translate(83 100) scale(1.16)"/>
+          <use href="#gear" transform="translate(419 396) scale(1.28)"/>
+          <use href="#gear" transform="translate(102 414) scale(.67)"/>
+          <circle cx="250" cy="248" r="192" fill="#100a07" opacity=".65" transform="translate(0 9)"/>
+          <circle cx="250" cy="248" r="188" fill="url(#metal)" stroke="#d49b5c" stroke-width="2"/>
+          <circle cx="250" cy="248" r="170" fill="#4b2b1b" stroke="#60371e" stroke-width="4"/>
+          <circle cx="250" cy="248" r="160" fill="url(#face)" stroke="#edc384" stroke-width="2"/>
+          <circle cx="250" cy="248" r="150" fill="none" stroke="#9d6d42" stroke-width="1"/>
+          <use href="#screw" x="250" y="69"/><use href="#screw" x="429" y="248"/><use href="#screw" x="250" y="427"/><use href="#screw" x="71" y="248"/>
+          <path d="M147 324a128 128 0 1 1 206 0" fill="none" stroke="#4b3222" stroke-width="8" stroke-dasharray="2 7"/>
+          <path d="M126 230a125 125 0 0 1 75-97" fill="none" stroke="#777043" stroke-width="6"/>
+          <path d="M345 167a125 125 0 0 1 28 57" fill="none" stroke="#a34432" stroke-width="6"/>
+          <g fill="#4b3020" font-family="Georgia, serif" text-anchor="middle">
+            <text x="153" y="292" font-size="16">МИН</text><text x="250" y="154" font-size="17">СРЕДНИЙ</text><text x="347" y="292" font-size="16">МАКС</text>
+            <text x="250" y="312" font-size="23">Тихий огонь</text><text x="250" y="339" font-size="13" letter-spacing="3">РЕЖИМ НАГРЕВА</text>
+          </g>
+          <g class="needle">
+            <path d="m250 270-5-22-78-77 89 71 13 7z" fill="#713a25" stroke="#361d13" stroke-width="2"/>
+          </g>
+          <circle cx="250" cy="248" r="12" fill="url(#metal)" stroke="#61351d" stroke-width="2"/>
+          <circle cx="250" cy="248" r="4" fill="#493020"/>
+          <path d="M227 365h46m-32 7h18" stroke="#976738"/>
+        </svg>
+      </figure>
+    </section>
+
+    <div class="wrap manual">
+      <section id="ingredients" class="paper">
+        <header class="section-head">
+          <p class="eyebrow">На 1 порцию</p>
+          <h2>Ингредиенты</h2>
+        </header>
+        <dl class="ingredients">
+          <div><dt>Яйца</dt><dd>3 шт.</dd></div>
+          <div><dt>Сливочное масло</dt><dd>15 г</dd></div>
+          <div><dt>Мелкая соль</dt><dd>1 щепотка</dd></div>
+        </dl>
+        <p class="note">Подойдёт антипригарная сковорода диаметром 20–22 см и мягкая лопатка.</p>
+      </section>
+
+      <section id="recipe" class="paper">
+        <h2>Пошаговый рецепт</h2>
+        <ol class="steps">
+          <li><div><h3>Смешайте яйца</h3><p>Разбейте яйца в миску, добавьте соль и перемешайте вилкой до однородности. Остановитесь, когда исчезнут полосы белка.</p></div></li>
+          <li><div><h3>Растопите масло</h3><p>Поставьте сковороду на слабый огонь, добавьте масло и распределите его по дну. Вливайте яйца, как только масло растает и слегка запенится.</p></div></li>
+          <li><div><h3>Соберите мягкие складки</h3><p>Когда яйца начнут схватываться у края, сдвигайте их лопаткой к центру и наклоняйте сковороду, чтобы жидкая смесь заполнила свободное место.</p></div></li>
+          <li><div><h3>Сложите и подайте</h3><p>Когда жидких участков уже нет, а верх остаётся блестящим, снимите сковороду с огня. Сложите омлет пополам и сразу переложите на тарелку.</p></div></li>
+        </ol>
+      </section>
+
+      <section id="temperature" class="panel">
+        <p class="eyebrow">Регулировка плиты</p>
+        <h2>Температурный режим</h2>
+        <div class="heat">
+          <div><h3>Слабый огонь</h3><p>Масло тихо пенится, края омлета схватываются постепенно. Сохраняйте этот нагрев до конца приготовления.</p></div>
+          <div><h3>Слишком горячо</h3><p>Масло темнеет, яйца шипят и быстро схватываются. Снимите сковороду с конфорки на несколько секунд и уменьшите нагрев.</p></div>
+        </div>
+      </section>
+
+      <div class="pair">
+        <section id="tips" class="paper">
+          <h2>Секреты приготовления</h2>
+          <ul class="tips">
+            <li>Перемешивайте яйца спокойно, чтобы в смеси было меньше пузырьков.</li>
+            <li>Начинку приготовьте заранее. Добавьте немного тёртого сыра или зелени перед тем, как сложить омлет.</li>
+            <li>Слегка согрейте тарелку, чтобы омлет дольше оставался тёплым.</li>
+          </ul>
+        </section>
+        <section id="mistakes" class="paper">
+          <h2>Распространённые ошибки</h2>
+          <dl class="mistakes">
+            <div><dt>Слишком широкая сковорода</dt><dd>Тонкий слой яиц быстро пересыхает. Для трёх яиц достаточно 20–22 см.</dd></div>
+            <div><dt>Слишком много начинки</dt><dd>Омлет может порваться при складывании. Достаточно пары ложек начинки.</dd></div>
+            <div><dt>Омлет остаётся на сковороде</dt><dd>Горячее дно продолжает готовить яйца. Переложите омлет на тарелку сразу.</dd></div>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="wrap footer"><a href="#top">К началу страницы</a></footer>
+</body>
+</html>
