@@ -71,6 +71,9 @@ h1 em { color: var(--gold); }
 .button:hover { background: #ffdaa0; }
 .button:focus-visible { outline-color: var(--cream); }
 .instrument { margin: 0; }
+.dial-control { cursor: grab; touch-action: none; }
+.instrument:active .dial-control { cursor: grabbing; }
+.instrument.is-adjusted .needle { animation: none; }
 .instrument svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 12px 16px #100906a1); }
 .needle { transform-origin: 250px 248px; animation: settle 1.45s ease-out both; }
 @keyframes settle {

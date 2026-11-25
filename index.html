@@ -29,8 +29,8 @@
         <p class="intro">Три яйца, сливочное масло и тихий огонь. Готовим нежный омлет со светлой поверхностью и мягкими складками.</p>
         <a class="button" href="#recipe">К рецепту</a>
       </div>
-      <figure class="instrument" aria-hidden="true">
-        <svg viewBox="0 0 500 500">
+      <figure class="instrument" role="slider" tabindex="0" aria-label="Манометр нагрева" aria-valuemin="0" aria-valuemax="100" aria-valuenow="31" aria-valuetext="Слабый нагрев">
+        <svg viewBox="0 0 500 500" aria-hidden="true">
           <defs>
             <linearGradient id="metal" x2="1" y2="1" gradientUnits="objectBoundingBox">
               <stop stop-color="#f2cb81"/><stop offset=".28" stop-color="#9a5a30"/><stop offset=".49" stop-color="#663920"/><stop offset=".75" stop-color="#d69a51"/><stop offset="1" stop-color="#53301c"/>
@@ -65,12 +65,15 @@
             <text x="153" y="292" font-size="16">МИН</text><text x="250" y="154" font-size="17">СРЕДНИЙ</text><text x="347" y="292" font-size="16">МАКС</text>
             <text x="250" y="312" font-size="23">Тихий огонь</text><text x="250" y="339" font-size="13" letter-spacing="3">РЕЖИМ НАГРЕВА</text>
           </g>
-          <g class="needle">
-            <path d="m250 270-5-22-78-77 89 71 13 7z" fill="#713a25" stroke="#361d13" stroke-width="2"/>
+          <g class="needle-position">
+            <g class="needle">
+              <path d="m250 270-5-22-78-77 89 71 13 7z" fill="#713a25" stroke="#361d13" stroke-width="2"/>
+            </g>
           </g>
           <circle cx="250" cy="248" r="12" fill="url(#metal)" stroke="#61351d" stroke-width="2"/>
           <circle cx="250" cy="248" r="4" fill="#493020"/>
           <path d="M227 365h46m-32 7h18" stroke="#976738"/>
+          <circle class="dial-control" cx="250" cy="248" r="160" fill="transparent"/>
         </svg>
       </figure>
     </section>
