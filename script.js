@@ -30,6 +30,7 @@ function setGaugeValue(value) {
   const heat = gaugeValue < 40 ? 'Слабый нагрев' : gaugeValue < 70 ? 'Средний нагрев' : 'Сильный нагрев';
 
   gauge.classList.add('is-adjusted');
+  gauge.style.setProperty('--gauge-heat', Math.max(0, (gaugeValue - 31) / 69));
   needlePosition.setAttribute('transform', 'rotate(' + (angle - initialAngle) + ' ' + center.x + ' ' + center.y + ')');
   gauge.setAttribute('aria-valuenow', gaugeValue);
   gauge.setAttribute('aria-valuetext', heat + ', ' + gaugeValue + '% шкалы');
@@ -52,7 +53,8 @@ dial.addEventListener('pointerdown', (event) => {
   if (event.button !== 0 || dragPointer !== null) return;
   dragPointer = event.pointerId;
   dial.setPointerCapture(dragPointer);
-  gauge.focus({ preventScroll: true });
+  event.preventDefault();
+  gauge.classList.add('is-dragging');
   moveNeedle(event);
 });
 
@@ -62,6 +64,7 @@ dial.addEventListener('pointermove', (event) => {
 
 dial.addEventListener('lostpointercapture', () => {
   dragPointer = null;
+  gauge.classList.remove('is-dragging');
 });
 
 gauge.addEventListener('keydown', (event) => {

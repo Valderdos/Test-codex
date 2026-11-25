@@ -70,9 +70,29 @@ h1 em { color: var(--gold); }
 }
 .button:hover { background: #ffdaa0; }
 .button:focus-visible { outline-color: var(--cream); }
-.instrument { margin: 0; }
+.instrument {
+  --gauge-heat: 0;
+  position: relative;
+  margin: 0;
+}
+.instrument::before {
+  position: absolute;
+  inset: 3%;
+  content: '';
+  pointer-events: none;
+  background: radial-gradient(circle, #ff773d55, #db4c2b40 48%, transparent 69%);
+  opacity: var(--gauge-heat);
+  transition: opacity .2s ease-out;
+}
+.instrument svg { position: relative; }
+.heated-rim {
+  opacity: var(--gauge-heat);
+  filter: drop-shadow(0 0 7px #ff5a27);
+  transition: opacity .2s ease-out;
+}
+.instrument.is-dragging { outline: none; }
 .dial-control { cursor: grab; touch-action: none; }
-.instrument:active .dial-control { cursor: grabbing; }
+.instrument.is-dragging .dial-control { cursor: grabbing; }
 .instrument.is-adjusted .needle { animation: none; }
 .instrument svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 12px 16px #100906a1); }
 .needle { transform-origin: 250px 248px; animation: settle 1.45s ease-out both; }
@@ -152,4 +172,5 @@ p, dl, dd { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
   .needle { animation: none; }
+  .instrument::before, .heated-rim { transition: none; }
 }
